@@ -27,7 +27,7 @@ Permite generar facturas y manejar un stock basico.
    ```
 2. Configura la base de datos en src/main/resources/application.properties:
    ```bash
-    spring.datasource.url=jdbc:mysql://localhost:3306/reserva_baile?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC
+    spring.datasource.url=jdbc:mysql://localhost:3306/utn_stock?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC
     spring.datasource.username=tu_usuario_mysql
     spring.datasource.password=tu_contraseña_mysql
    ```

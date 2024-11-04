@@ -2,6 +2,8 @@ package com.facturacion.practicoUTN.controller;
 
 import com.facturacion.practicoUTN.model.Moneda;
 import com.facturacion.practicoUTN.service.MonedaService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,6 +24,8 @@ public class MonedaController {
         this.monedaService = monedaService;
     }
 
+    @Operation(summary = "Obtener todas las monedas")
+    @ApiResponse(responseCode = "200", description = "Lista de monedas recuperada")
     @GetMapping
     public ResponseEntity<Iterable<Moneda>> getAllMonedas() {
         List<Moneda> monedas = monedaService.getAllMonedas();
