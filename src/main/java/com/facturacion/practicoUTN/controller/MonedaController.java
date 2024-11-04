@@ -24,7 +24,7 @@ public class MonedaController {
         this.monedaService = monedaService;
     }
 
-    @Operation(summary = "Obtener todas las monedas")
+    @Operation(summary = "Obtiene una lista de todas las monedas")
     @ApiResponse(responseCode = "200", description = "Lista de monedas recuperada")
     @GetMapping
     public ResponseEntity<Iterable<Moneda>> getAllMonedas() {
@@ -32,12 +32,14 @@ public class MonedaController {
         return ResponseEntity.ok(monedas);
     }
 
+    @Operation(summary = "Crea una moneda nueva")
     @PostMapping
     public ResponseEntity<Moneda> createMoneda(@Valid @RequestBody Moneda moneda) {
         System.out.println("Intentando crear moneda con datos: " + moneda);
         return new ResponseEntity<>(monedaService.createMoneda(moneda), HttpStatus.CREATED);
     }
 
+    @Operation(summary = "Modifica una moneda")
     @PutMapping("/{id}")
     public ResponseEntity<Moneda> updateMoneda(@PathVariable Long id, @Valid @RequestBody Moneda monedaDetails) {
         try {
@@ -47,6 +49,7 @@ public class MonedaController {
         }
     }
 
+    @Operation(summary = "Elimina una moneda")
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteMoneda(@PathVariable Long id) {
         monedaService.deleteMoneda(id);
