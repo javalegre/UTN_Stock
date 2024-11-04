@@ -1,0 +1,11 @@
+-- Eliminamos todas las tablas
+DROP TABLE IF EXISTS almacenes;
+DROP TABLE IF EXISTS clientes;
+DROP TABLE IF EXISTS mercaderias;
+DROP TABLE IF EXISTS monedas;
+DROP TABLE IF EXISTS stock_entradas;
+DROP TABLE IF EXISTS stock_entradas_detalles;
+DROP TABLE IF EXISTS stock_salidas;
+DROP TABLE IF EXISTS stock_salidas_detalles;
+DROP TABLE IF EXISTS tipo_responsables;
+DROP TABLE IF EXISTS vendedores;

@@ -8,6 +8,7 @@ class PracticoUtnApplicationTests {
 
 	@Test
 	void contextLoads() {
+		// Prueba simple para verificar que el contexto se carga
 	}
 
 }
