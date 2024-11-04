@@ -24,7 +24,8 @@ public class MonedaController {
         this.monedaService = monedaService;
     }
 
-    @Operation(summary = "Obtiene una lista de todas las monedas")
+    @Operation(summary = "Obtiene una lista de todas las monedas",
+               description = "Devuelve una lista con todas las monedas disponibles en el sistema y su cotización actual")
     @ApiResponse(responseCode = "200", description = "Lista de monedas recuperada")
     @GetMapping
     public ResponseEntity<Iterable<Moneda>> getAllMonedas() {
