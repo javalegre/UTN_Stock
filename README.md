@@ -33,7 +33,7 @@ Permite generar facturas y manejar un stock basico.
    ```
 3. Compila y ejecuta la aplicación:
     ```bash
-    ./mvnw spring-boot:run
+    ./mvn spring-boot:run
     ```
 
 ## Uso
